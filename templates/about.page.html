@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>This is the about page</h1>
+
+                <p>This came from the template: {{index .StringMap "test"}}</p>
+
+                <p>
+                    {{if ne (index .StringMap "remote_ip") ""}}
+                        Your remote IP address is {{index .StringMap "remote_ip"}}
+                    {{else}}
+                        I don't know your ip address yet. Visit the <a href="/">Home Page</a> so I can set it
+                    {{end}}
+                </p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
